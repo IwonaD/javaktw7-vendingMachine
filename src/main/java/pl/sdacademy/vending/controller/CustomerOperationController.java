@@ -6,10 +6,10 @@ public class CustomerOperationController {
 
     //skomponowaLISMY OBIEKT DO INNEJ KLASY. To jest kompozycja. Lepsza niz dziedziczenie
 
-    private VendingMachine machine;
+    private final VendingMachine machine;
 
-    public CustomerOperationController() {
-        machine = new VendingMachine();
+    public CustomerOperationController(VendingMachine machine) {
+        this.machine = machine;
     }
 
     public void printmachine() {

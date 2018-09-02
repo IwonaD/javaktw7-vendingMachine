@@ -6,12 +6,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ConfigurationTest {
+public class PropertiesFileConfigurationTest {
 
     @Test
     public void shouldReturnTextPropertyFromConfiguration() {
         //given
-        Configuration configuration = new Configuration();
+        PropertiesFileConfiguration configuration = PropertiesFileConfiguration.getInstance();
         String propertyName = "property.text.value";
 
 
@@ -28,7 +28,7 @@ public class ConfigurationTest {
     @Test
     public void shouldReturnLongPropertyFromConfiguration() {
         //given
-        Configuration configuration = new Configuration();
+        PropertiesFileConfiguration configuration = PropertiesFileConfiguration.getInstance();
         String propertyName = "property.long.value";
 
         //when
@@ -44,7 +44,7 @@ public class ConfigurationTest {
             @Test
     public void shouldReturnDefaultValueWhenTextPropertyDoesNotExist(){
                 //given
-                Configuration configuration = new Configuration();
+                PropertiesFileConfiguration configuration = PropertiesFileConfiguration.getInstance();
                 String propertyName = "notExistProperty";
                 String defaultValue = " I'm default";
 
@@ -58,7 +58,7 @@ public class ConfigurationTest {
     @Test
     public void shouldReturnDefaultValueWhenLongPropertyDoesNotExist(){
         //given
-        Configuration configuration = new Configuration();
+        PropertiesFileConfiguration configuration = PropertiesFileConfiguration.getInstance();
         String propertyName = "notExistProperty";
         Long defaultValue = 555L;
 
