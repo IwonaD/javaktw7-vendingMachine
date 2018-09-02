@@ -1,7 +1,7 @@
 package pl.sdacademy.vending.model;
 
 import pl.sdacademy.vending.util.Configuration;
-import pl.sdacademy.vending.util.PropertiesFileConfiguration;
+
 
 public class VendingMachine {
     public final Configuration configuration;
